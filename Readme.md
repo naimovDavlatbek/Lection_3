@@ -32,6 +32,35 @@ function recursiveFunc() {
   // some code here...
 } 
 ````
+Он чизе, ки функсияҳои рекурсивӣ аз функсияҳои муқаррарии JavaScript фарқ мекунад, шарти асосӣ ва занги рекурсивӣ мебошанд.
+___
+## Шарти асосӣ чист?
+Ҳангоми истифодаи функсияи рекурсивӣ, ҳолати асосӣ он чизест, ки ба функсия имкон медиҳад,
+ ки кай занги худро қатъ кунад. Вақте ки шарти асосӣ иҷро мешавад, рекурсия ба охир мерасад.
+
+
+````Javascript
+function recursiveFunc() {
+  if(base condition) {
+    // stops recursion if condition is met
+  }
+  // else recursion continues
+  recurse();
+}
+````
+___
+## Чаро шарти асосӣ лозим аст?
+Бе шарти асосӣ, шумо ба рекурсияи беохир дучор мешавед. Ҳолате, ки функсияи шумо занги худро бидуни таваққуф идома медиҳад, масалан:
+
+
+````Javascript
+function doSomething(action) {
+  console.log(`I am ${action}.`)
+  doSomething(action)
+}
+
+doSomething("running")
+````
 
 
 
