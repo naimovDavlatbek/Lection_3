@@ -62,5 +62,21 @@ function doSomething(action) {
 doSomething("running")
 ````
 
+____
+## Намунаи функсияи рекурсивӣ.
+  
+````Javascript
+function doSomething(n) {
+  if(n === 0) {
+    console.log("TASK COMPLETED!")
+    return
+  }
+  console.log("I'm doing something.")
+  doSomething(n - 1)
+}
+doSomething(3)
+````
+Ин аст натиҷа вақте ки шумо рақамро 3ба doSomethingфунксия мегузоред.
+
 
 
