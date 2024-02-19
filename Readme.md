@@ -4,9 +4,9 @@
 Намунаи асосии функсияи рекурсивӣ:
 
 
-''''Java Script
+````Javascript
 function recursiveFunc() {
   // some code here... 
   recursiveFunc()
 }
-''''
+````
