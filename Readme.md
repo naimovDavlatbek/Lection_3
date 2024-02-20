@@ -119,6 +119,59 @@ findFactorial(5) // 120
 
 ____
 
+## JavaScript Closures.
+Before you learn about closures, you need to understand two concepts:
++ Nested Function.
++ Returning a function.
+ 
+ ### JavaScript Nested Function.
+```` Javascript
+// nested function example
+
+// outer function
+function greet(name) {
+
+    // inner function
+    function displayName() {
+        console.log('Hi' + ' ' + name);
+    }
+
+    // calling inner function
+    displayName();
+}
+
+// calling outer function
+greet('John'); // Hi John
+````
+Дар барномаи дар боло зикршуда, greet()функсия дорои displayName()функсияи дохили он мебошад.
+
+
+## Бозгашти функсия.
+Дар JavaScript, шумо инчунин метавонед функсияро дар дохили функсия баргардонед. Барои намуна
+
+
+````Javascript
+function greet(name) {
+    function displayName() {
+        console.log('Hi' + ' ' + name);
+    }
+
+    // returning a function
+    return displayName;
+}
+
+const g1 = greet('John');
+console.log(g1); // returns the function definition
+g1(); // calling the function
+````
+Натиҷа 
+````Javascript
+function displayName() { 
+      console.log('Салом' + ' ' + ном); 
+  } 
+Салом Ҷон
+````
+
 ## What is this closure in Java Script?
 
 Closure Java Script хусусиятест, ки ба функсияӣ дохили имкон медиҳад, ки ба доираи берунии функсия дастрасӣ пайдо кунад.
@@ -141,4 +194,10 @@ console.log(get_func_inner());
 console.log(get_func_inner());
 console.log(get_func_inner());
 ````
+
+Натиҷа:
+
+Мо метавонем ба тағирёбандаи b , ки дар функсияи foo() тавассути функсияи inner() муайян шудааст, дастрас шавем, зеро баъдтар занҷири доираи функсияи иҳотакунандаро ҳангоми иҷрои функсияи иҳотакунанда нигоҳ медорад, яъне функсияи дохилӣ арзиши b -ро тавассути занҷири доираи он. Ин басташавӣ дар амал аст, ки функсияи дохилӣ метавонад ба тағирёбандаҳои функсияи беруна ва инчунин ҳама тағирёбандаҳои глобалӣ дастрасӣ дошта бошад.
+
+
 
