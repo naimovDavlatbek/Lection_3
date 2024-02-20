@@ -171,6 +171,61 @@ function displayName() {
   } 
 Салом Ҷон
 ````
+Дар барномаи боло, greet()функсия таърифи функсияро бармегардонад displayName.
+
+Дар ин ҷо, таърифи функсияи баргардонидашуда баg1тағйирёбанда. Вақте ки шумо чоп мекунедg1-ро истифода баред console.log(g1), шумо таърифи функсияро хоҳед гирифт.
+
+Барои занг задан ба функсияе, ки дарg1тағирёбанда, мо g1()бо қавс истифода мебарем.
+___
+
+## Пӯшидани JavaScript
+Дар JavaScript, пӯшидан дастрасӣ ба доираи берунии функсияро аз дохили функсияи дохилӣ, ҳатто пас аз баста шудани функсияи беруна таъмин мекунад. Барои намуна,
+
+````Javascript
+// javascript closure example
+
+// outer function
+function greet() {
+
+    // variable defined outside the inner function
+    let name = 'John';
+
+    // inner function
+    function displayName() {
+
+        // accessing name variable
+        return 'Hi' + ' ' + name;
+      
+    }
+
+    return displayName;
+}
+
+const g1 = greet();
+console.log(g1); // returns the function definition
+console.log(g1()); // returns the value
+````
+Натиҷа
+
+````Javascript
+function displayName() { 
+      // дастрасии тағирёбандаи ном 
+      баргардонидани 'Hi' + ' ' + name; 
+  } 
+Салом Ҷон
+````
+Дар мисоли боло, вақте ки greet()функсия даъват карда мешавад, он таърифи функсияи -ро бармегардонад displayName.
+
+Дар ин ҷо g1истинод ба displayName() функсия аст.
+
+Вақте ки g1()даъват карда мешавад, он то ҳол ба greet()функсия дастрасӣ дорад.
+
+Вақте ки мо иҷро мекунем console.log(g1), он таърифи функсияро бармегардонад.
+
+Консепсияи басташавӣ барои дигар забонҳои барномасозӣ ба монанди Python, Swift, Ruby ва ғайра вуҷуд дорад.
+
+
+
 
 ## What is this closure in Java Script?
 
