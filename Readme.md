@@ -119,5 +119,8 @@ findFactorial(5) // 120
 
 ____
 
+## What is this closure in Java Script?
+
+
 
 
